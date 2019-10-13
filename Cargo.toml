@@ -1,7 +1,10 @@
 [package]
 name = "graphviz-sys"
-version = "0.1.0"
+description = "Low level bindings to graphviz."
+version = "0.1.0-dev"
 authors = ["Kenan Sulayman <kenan@sly.mn>"]
+license = "MIT"
+readme = "readme.md"
 edition = "2018"
 
 [[example]]
