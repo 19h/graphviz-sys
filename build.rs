@@ -1,23 +1,23 @@
-use bindgen;
 use bindgen::builder;
 
+use std::env;
+use std::path::PathBuf;
+
 fn main() {
-    let bindings =
-        builder()
-            .header("./graphviz.h")
-            .generate()
-            .unwrap();
-
-    bindings.write_to_file("src/lib.rs").unwrap();
-
-    println!("cargo:rustc-flags=-L /usr/local/lib/");
-    println!("cargo:rustc-link-search=/usr/local/lib/");
-
-    println!("cargo:rustc-flags=-L /opt/local/lib/");
-    println!("cargo:rustc-link-search=/opt/local/lib/");
-
     println!("cargo:rustc-link-lib=gvc");
     println!("cargo:rustc-link-lib=cgraph");
     println!("cargo:rustc-link-lib=pathplan");
     println!("cargo:rustc-link-lib=cdt");
+
+    let bindings =
+        builder()
+            .header("./wrapper.h")
+            .generate()
+            .expect("Unable to generate bindings");
+
+    let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
+
+    bindings
+        .write_to_file(out_path.join("bindings.rs"))
+        .expect("Couldn't write bindings!");
 }
