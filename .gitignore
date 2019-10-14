@@ -3,4 +3,3 @@
 Cargo.lock
 .idea
 .DS_Store
-src/lib.rs
