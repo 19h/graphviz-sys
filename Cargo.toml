@@ -1,5 +1,5 @@
 [package]
-version = "0.1.4-alpha.0"
+version = "1.0.0"
 name = "graphviz-sys"
 description = "Low level bindings to graphviz."
 repository = "https://github.com/19h/graphviz-sys"
