@@ -7,7 +7,7 @@
     crates.io
   </a>
   —
-  <a href="https://docs.rs/ul-sys/latest/graphviz_sys/">
+  <a href="https://docs.rs/graphviz-sys/latest/graphviz_sys/">
     documentation
   </a>
   —
@@ -17,9 +17,3 @@
 </div>
 
 <br />
-
-```rust
-use graphviz_sys as gv;
-
-TBD
-```

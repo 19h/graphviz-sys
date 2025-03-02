@@ -9,7 +9,7 @@ readme = "readme.md"
 edition = "2018"
 
 [[example]]
-name = "example"
+name = "dot"
 
 [build-dependencies]
-bindgen = "0.54.0"
+bindgen = "0.71.1"
